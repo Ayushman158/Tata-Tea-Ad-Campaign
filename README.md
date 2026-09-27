@@ -6,6 +6,6 @@ After a flood leaves the headlines, the work of reopening begins. Choose Assam h
 
 **Communication ecology:** cinematic film and social media → packaging → QR code → website → orders to makers, held together by one Choose Assam identity.
 
-Open `index.html` in a browser to view the case study.
+Open `index.html` in a browser to view the case study. The campaign microsite (where the pack QR lands) is in `site/`.
 
 Speculative project. Not affiliated with or endorsed by Tata Consumer Products.

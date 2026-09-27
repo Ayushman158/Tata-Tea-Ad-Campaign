@@ -74,8 +74,9 @@ figcaption { margin-top: 12px; }
 .row-4 img { aspect-ratio: 4 / 5; object-fit: cover; }
 .row-4 .n { display: flex; justify-content: space-between; margin-top: 12px; border-top: 1px solid var(--ink); padding-top: 10px; }
 .web-frame { background: #F4F4F2; padding: clamp(24px, 6vw, 120px) clamp(20px, 12vw, 240px) 0; }
-.web-frame .view { height: min(88svh, 900px); overflow-y: auto; scrollbar-width: none; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.3); }
+.web-frame .view { height: min(88svh, 900px); overflow: hidden; scrollbar-width: none; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.3); }
 .web-frame .view::-webkit-scrollbar { display: none; }
+.web-frame iframe { display: block; width: 100%; height: 100%; border: 0; background: #FBF8F1; }
 .credits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gutter); border-top: 1px solid var(--ink); padding-top: 14px; }
 .credits div { display: grid; gap: 2px; }
 /* ── brief blocks: problem, insights, why ── */
@@ -175,6 +176,11 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
   </section>
 
   <figure class="gap-xl bleed rv">
+    <img src="assets/problem-aerial.jpg" alt="Aerial view of flooded fields and tin-roofed houses in Assam" loading="lazy">
+    <figcaption class="wrap label muted">Monsoon · Assam</figcaption>
+  </figure>
+
+  <figure class="gap-lg bleed rv">
     <img src="assets/film-street.jpg" alt="A shuttered market street in Assam after the flood" loading="lazy">
     <figcaption class="wrap label muted">01 · Closed</figcaption>
   </figure>
@@ -216,13 +222,23 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
     <figure class="drop"><img src="assets/film-fold.jpg" alt="A finished cloth folded into kraft paper for an order" loading="lazy"><figcaption class="label muted">04 · Open for orders</figcaption></figure>
   </section>
 
+  <figure class="gap-xl bleed rv">
+    <img src="assets/bleed-delivery.jpg" alt="A delivery rider carries a kraft parcel across a bridge over the Brahmaputra at sunrise" loading="lazy">
+    <figcaption class="wrap label muted">05 · On its way</figcaption>
+  </figure>
+
+  <figure class="gap-lg bleed rv">
+    <img src="assets/bleed-home.jpg" alt="In a city apartment, hands unwrap a handwoven red-bordered cloth from kraft paper beside a cup of tea" loading="lazy">
+    <figcaption class="wrap label muted">06 · Delivered</figcaption>
+  </figure>
+
   <section class="wrap gap-xl rv" aria-label="Four states">
     <p class="label muted" style="margin-bottom:20px">Every maker, one status</p>
     <ol class="row-4">
-      <li><img src="assets/film-street.jpg" alt="" loading="lazy"><div class="n label"><span>Closed</span><span class="muted">Day 1</span></div></li>
-      <li><img src="assets/film-reopen.jpg" alt="" loading="lazy"><div class="n label"><span>Rebuilding</span><span class="muted">Day 14</span></div></li>
-      <li><img src="assets/film-weaver.jpg" alt="" loading="lazy"><div class="n label"><span>Producing</span><span class="muted">Day 40</span></div></li>
-      <li><img src="assets/film-handoff.jpg" alt="" loading="lazy"><div class="n label"><span>Open</span><span class="muted">Day 90</span></div></li>
+      <li><img src="assets/state-closed.jpg" alt="Jonali at her shutter as floodwater fills the workshop" loading="lazy"><div class="n label"><span>Closed</span><span class="muted">Day 1</span></div></li>
+      <li><img src="assets/state-rebuilding.jpg" alt="Jonali hangs washed yarn to dry on a mud-cracked floor" loading="lazy"><div class="n label"><span>Rebuilding</span><span class="muted">Day 14</span></div></li>
+      <li><img src="assets/state-producing.jpg" alt="Jonali and another weaver at work, finished cloths stacked on shelves" loading="lazy"><div class="n label"><span>Producing</span><span class="muted">Day 40</span></div></li>
+      <li><img src="assets/film-handoff.jpg" alt="A parcel handed to a delivery rider outside the workshop" loading="lazy"><div class="n label"><span>Open</span><span class="muted">Day 90</span></div></li>
     </ol>
   </section>
 
@@ -260,14 +276,19 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
 
   <section class="wrap gap-lg rv" aria-label="Touchpoints">
     <ol class="row-6">
-      <li><a href="#top" aria-label="Play the film at the top of the page"><img src="assets/film-weaver.jpg" alt="Still from the campaign film" loading="lazy"></a><div class="n label"><span>Cinematic film</span><span class="muted">60s anthem</span></div></li>
-      <li><img src="assets/film-pluck.jpg" alt="Vertical cut for social: hands plucking tea leaves" loading="lazy" style="object-position:55% 50%"><div class="n label"><span>Social media</span><span class="muted">Vertical cuts, maker stories</span></div></li>
-      <li><img src="assets/figma-01.jpg" alt="Choose Assam pack" loading="lazy"><div class="n label"><span>Packaging</span><span class="muted">Limited-edition pack</span></div></li>
-      <li><img src="assets/figma-07.jpg" alt="Billboard QR panel" loading="lazy" style="object-position:88% 40%"><div class="n label"><span>QR code</span><span class="muted">Pack, tag, billboard</span></div></li>
-      <li><img src="assets/web-concept.jpg" alt="Website homepage" loading="lazy" style="object-position:50% 0"><div class="n label"><span>Website</span><span class="muted">Maker directory</span></div></li>
-      <li><img src="assets/film-end.jpg" alt="Choose Assam lockup" loading="lazy"><div class="n label"><span>Branding</span><span class="muted">Choose Assam identity</span></div></li>
+      <li><a href="#top" aria-label="Play the film at the top of the page"><img src="assets/tp-film.jpg" alt="A family watches the Choose Assam film on TV at home" loading="lazy"></a><div class="n label"><span>Cinematic film</span><span class="muted">60s anthem</span></div></li>
+      <li><img src="assets/tp-social.jpg" alt="A commuter watches a Choose Assam reel on her phone on a Mumbai local train" loading="lazy"><div class="n label"><span>Social media</span><span class="muted">Vertical cuts, maker stories</span></div></li>
+      <li><img src="assets/tp-pack.jpg" alt="A hand takes a Choose Assam pack from a kitchen shelf" loading="lazy"><div class="n label"><span>Packaging</span><span class="muted">Limited-edition pack</span></div></li>
+      <li><img src="assets/tp-qr.jpg" alt="Scanning the QR hang tag on a Choose Assam pack" loading="lazy"><div class="n label"><span>QR code</span><span class="muted">Pack, tag, billboard</span></div></li>
+      <li><a href="site/" aria-label="Open the Choose Assam microsite"><img src="assets/site-shot.jpg" alt="Choose Assam microsite on a phone" loading="lazy" style="object-position:50% 0"></a><div class="n label"><span>Website</span><span class="muted">Maker directory</span></div></li>
+      <li><img src="assets/identity-lockup.jpg" alt="Choose Assam lockup and hang tag" loading="lazy"><div class="n label"><span>Branding</span><span class="muted">Choose Assam identity</span></div></li>
     </ol>
   </section>
+
+  <figure class="wrap gap-xl rv">
+    <img src="assets/identity-sheet.jpg" alt="Choose Assam identity: lockup, motifs, colours, typography and tone of voice" loading="lazy">
+    <figcaption class="label muted">Identity · Choose Assam</figcaption>
+  </figure>
 
   <figure class="gap-xl bleed rv">
     <img src="assets/figma-01.jpg" alt="Choose Assam limited-edition Tata Tea Premium pouch with hang tag on a wooden table" loading="lazy">
@@ -293,12 +314,12 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
   </figure>
 
   <section class="wrap gap-xl rv" aria-label="Campaign site">
-    <p class="note" style="margin-bottom:clamp(28px,4vw,56px)">One site to follow the story from the pack to the maker.</p>
+    <p class="note" style="margin-bottom:clamp(28px,4vw,56px)">One scan from the pack lands here: the makers open this week, and a way to order.</p>
   </section>
   <figure class="web-frame rv">
-    <div class="view" tabindex="0" aria-label="Campaign homepage concept, scrollable"><img src="assets/web-concept.jpg" alt="Homepage concept for chooseassam.in" loading="lazy"></div>
+    <div class="view"><iframe src="site/" title="Choose Assam microsite, live" loading="lazy"></iframe></div>
   </figure>
-  <p class="wrap label muted" style="margin-top:12px">Web · chooseassam.in</p>
+  <p class="wrap label muted" style="margin-top:12px;display:flex;justify-content:space-between;gap:16px"><span>Microsite · live, scroll inside</span><a href="site/">Open full screen ↗</a></p>
 
   <figure class="gap-xl bleed rv">
     <img src="assets/film-end.jpg" alt="Choose Assam end card: a river forms the word Assam" loading="lazy">
