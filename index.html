@@ -209,6 +209,20 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
   .chain-row .who { grid-column: 1 / -1; }
   .chain-head { display: none; }
 }
+
+/* ── visual storytelling ── */
+.line { font-size: clamp(24px, 2.6vw, 40px); font-weight: 300; letter-spacing: -0.025em; line-height: 1.15; max-width: 26ch; text-wrap: balance; }
+.line.c { margin: 0 auto; text-align: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 1vw, 16px); row-gap: clamp(24px, 3vw, 40px); }
+.grid-3 img { aspect-ratio: 4 / 5; object-fit: cover; }
+.notes { border-top: 1px solid var(--ink); }
+.notes details { border-bottom: 1px solid var(--rule); }
+.notes summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 22px 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 300; letter-spacing: -0.015em; }
+.notes summary::-webkit-details-marker { display: none; }
+.notes summary::after { content: '+'; font-weight: 300; color: var(--ink-2); }
+.notes details[open] summary::after { content: '–'; }
+.notes .body { padding: 8px 0 clamp(40px, 5vw, 64px); }
+@media (max-width: 820px) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 </style>
 </head>
 <body>
@@ -229,113 +243,41 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
 
 <main>
 
-  <section class="wrap gap-xl intro rv" aria-label="Introduction">
-    <dl class="meta label">
-      <div><dt class="muted">Client</dt><dd>Tata Tea Premium</dd></div>
-      <div><dt class="muted">What it is</dt><dd>Campaign · Packaging · Maker platform</dd></div>
-      <div><dt class="muted">Year</dt><dd>2026, speculative</dd></div>
-    </dl>
-    <p class="display">After a flood, Tata Tea uses its packs, shelves and ads to point people to the makers of Assam, so they can buy from them, pre-order or lend.</p>
+  <section class="wrap gap-xl rv" aria-label="Introduction">
+    <p class="display" style="font-size:clamp(30px,3.6vw,58px);max-width:24ch">After a flood, Tata Tea points its packs and ads at the makers of Assam, so people can buy from them instead of donating.</p>
+    <p class="label muted" style="margin-top:28px">Tata Tea Premium · M.Des, Designing Communication Ecologies, UPES · 2026, speculative</p>
   </section>
 
-  <section class="wrap gap-lg rv" aria-label="Overview">
-    <div class="overview">
-      <div><p class="label muted">Context</p><p>Floods close workshops, shops and homestays in Assam almost every monsoon. The news covers it for a few days. Reopening takes months.</p></div>
-      <div><p class="label muted">Problem</p><p>Most flood campaigns ask for a donation. It helps once, then the connection ends. It doesn’t bring a maker’s customers back.</p></div>
-      <div><p class="label muted">What I designed</p><p>A campaign, six community pack editions and a maker platform. One QR on every pack and ad leads to makers who are open, or close to it.</p></div>
-      <div><p class="label muted">Status</p><p>A speculative M.Des project for Designing Communication Ecologies at UPES. Not tested with makers or buyers. Makers and figures are illustrative.</p></div>
-    </div>
-  </section>
-
-  <section class="wrap gap-xl rv" aria-labelledby="problem-h">
-    <p class="chapter label"><b>01</b><span class="muted">After the water</span></p>
-    <div class="brief">
-      <p class="label muted">The problem</p>
-      <div>
-        <h2 id="problem-h">A flood gets a few days of news. Reopening takes months.</h2>
-        <ol class="index">
-          <li><span class="label muted">01</span><span><b>Attention moves on.</b> By the time silt is cleared and looms are repaired, the story has left the news.</span></li>
-          <li><span class="label muted">02</span><span><b>Donations end the relationship.</b> They help once, but nobody comes back as a customer.</span></li>
-          <li><span class="label muted">03</span><span><b>Makers lack reach.</b> Weavers, smiths and grocers have few ways to reach buyers outside the state.</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <figure class="gap-lg bleed rv">
+  <figure class="gap-xl bleed rv">
     <img src="assets/editions/scenes/s1-aerial.jpg" alt="Aerial view of flooded paddy fields and villages in Assam" loading="lazy">
-    <figcaption class="wrap label muted">Monsoon, Assam</figcaption>
   </figure>
+  <p class="wrap gap-md line rv">Floods close Assam’s workshops almost every monsoon. The news moves on in days. Reopening takes months.</p>
 
-  <section class="wrap gap-lg pair rv" aria-label="Reopening">
-    <figure><img src="assets/film-street.jpg" alt="A row of closed shutters on a muddy street after the flood" loading="lazy"><figcaption class="label muted">Closed</figcaption></figure>
-    <div class="drop">
-      <p class="note">The shutters stay down for weeks. Then someone opens one.</p>
-      <figure class="gap-lg"><img src="assets/film-reopen.jpg" alt="A shopkeeper lifts his shutter" loading="lazy"><figcaption class="label muted">Reopening</figcaption></figure>
-    </div>
+  <section class="wrap gap-xl pair rv" aria-label="Reopening">
+    <figure><img src="assets/film-street.jpg" alt="Closed shutters on a muddy street after the flood" loading="lazy"><figcaption class="label muted">Closed</figcaption></figure>
+    <figure class="drop"><img src="assets/film-reopen.jpg" alt="A shopkeeper lifts his shutter" loading="lazy"><figcaption class="label muted">Reopening</figcaption></figure>
   </section>
 
-  <section class="wrap gap-xl rv" aria-labelledby="insight-h">
-    <p class="chapter label"><b>02</b><span class="muted">The idea</span></p>
-    <div class="brief">
-      <p class="label muted">Insights</p>
-      <div>
-        <h2 id="insight-h">People want to help. An order helps for longer than a donation.</h2>
-        <ol class="index">
-          <li><span class="label muted">01</span><span><b>A buyer can come back.</b> A donation is one payment. An order can become a repeat customer.</span></li>
-          <li><span class="label muted">02</span><span><b>Tea already connects Assam to most Indian homes.</b> The link is there every morning. It just isn’t visible.</span></li>
-          <li><span class="label muted">03</span><span><b>Makers want orders.</b> They have work to sell. The campaign treats them as sellers, not as recipients of aid.</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap gap-lg rv" aria-label="The idea in one line">
+  <section class="wrap gap-xl rv" aria-label="The idea">
     <h2 class="split-head"><span>Not a donation.</span><span class="muted">An order.</span></h2>
   </section>
 
-  <section class="wrap gap-xl brief rv" aria-labelledby="why-h">
-    <p class="label muted">Why Tata Tea</p>
-    <div>
-      <h2 id="why-h">The brand already brings Assam into the home.</h2>
-      <ol class="index">
-        <li><span class="label muted">01</span><span><b>Assam is in the product.</b> Tata Tea Premium is a strong Assam CTC blend.</span></li>
-        <li><span class="label muted">02</span><span><b>It has spoken on public issues before.</b> Jaago Re showed people will listen.</span></li>
-        <li><span class="label muted">03</span><span><b>It owns the media.</b> Packs, shelves, outdoor and digital already reach the whole country. Choose Assam lends that space to makers.</span></li>
-      </ol>
+  <section class="wrap gap-xl rv" aria-label="The makers">
+    <p class="line" style="margin-bottom:clamp(32px,4vw,56px)">Six communities. Six crafts.</p>
+    <div class="grid-3">
+      <figure><img src="assets/editions/scenes/p1-tea.jpg" alt="Tea tribe pluckers at work" loading="lazy"><figcaption class="label"><span>Tea tribe pluckers</span> <span class="muted">· Sonitpur</span></figcaption></figure>
+      <figure><img src="assets/editions/portraits/ed-mising-portrait.jpg" alt="Mising weavers at work" loading="lazy"><figcaption class="label"><span>Mising weavers</span> <span class="muted">· Majuli</span></figcaption></figure>
+      <figure><img src="assets/editions/portraits/ed-bodo-portrait.jpg" alt="Bodo eri silk at work" loading="lazy"><figcaption class="label"><span>Bodo eri silk</span> <span class="muted">· Kokrajhar</span></figcaption></figure>
+      <figure><img src="assets/editions/scenes/p4-majuli.jpg" alt="Majuli mask makers at work" loading="lazy"><figcaption class="label"><span>Majuli mask makers</span> <span class="muted">· Majuli</span></figcaption></figure>
+      <figure><img src="assets/editions/scenes/p5-bellmetal.jpg" alt="Sarthebari bell metal at work" loading="lazy"><figcaption class="label"><span>Sarthebari bell metal</span> <span class="muted">· Barpeta</span></figcaption></figure>
+      <figure><img src="assets/editions/portraits/ed-jaapi-portrait.jpg" alt="Jaapi makers at work" loading="lazy"><figcaption class="label"><span>Jaapi makers</span> <span class="muted">· Nalbari</span></figcaption></figure>
     </div>
-  </section>
-
-  <section class="wrap gap-xl rv" aria-labelledby="makers-h">
-    <p class="chapter label"><b>03</b><span class="muted">The makers</span></p>
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">Six communities</p>
-      <div>
-        <h2 id="makers-h">The campaign starts with six communities and their crafts.</h2>
-        <p class="lede">Tea, cloth, silk, masks, metal and bamboo. Each has a long history in Assam, and most are recorded as Geographical Indications.</p>
-      </div>
-    </div>
-    <ol class="row-6">
-      <li><img src="assets/editions/scenes/p1-tea.jpg" alt="Tea tribe pluckers, at work" loading="lazy"><div class="n label"><span>Tea tribe pluckers</span><span class="muted">Tea gardens, Sonitpur</span></div></li>
-      <li><img src="assets/editions/portraits/ed-mising-portrait.jpg" alt="Mising weavers, at work" loading="lazy"><div class="n label"><span>Mising weavers</span><span class="muted">Riverbank villages, Majuli</span></div></li>
-      <li><img src="assets/editions/portraits/ed-bodo-portrait.jpg" alt="Bodo eri silk, at work" loading="lazy"><div class="n label"><span>Bodo eri silk</span><span class="muted">Kokrajhar</span></div></li>
-      <li><img src="assets/editions/scenes/p4-majuli.jpg" alt="Majuli mask makers, at work" loading="lazy"><div class="n label"><span>Majuli mask makers</span><span class="muted">Satras of Majuli</span></div></li>
-      <li><img src="assets/editions/scenes/p5-bellmetal.jpg" alt="Sarthebari bell metal, at work" loading="lazy"><div class="n label"><span>Sarthebari bell metal</span><span class="muted">Sarthebari, Barpeta</span></div></li>
-      <li><img src="assets/editions/portraits/ed-jaapi-portrait.jpg" alt="Jaapi makers, at work" loading="lazy"><div class="n label"><span>Jaapi makers</span><span class="muted">Nalbari</span></div></li>
-    </ol>
   </section>
 
   <section class="wrap gap-xl rv" aria-labelledby="chain-h">
-    <p class="chapter label"><b>04</b><span class="muted">From craft to pack</span></p>
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">How each pack is made</p>
-      <div>
-        <h2 id="chain-h">Every pattern comes from one craft.</h2>
-        <p class="lede">The maker, the craft up close, one motif drawn from it, the pattern built from that motif, and the pack it ends up on.</p>
-      </div>
-    </div>
+    <p class="line" id="chain-h" style="margin-bottom:clamp(32px,4vw,56px)">Each pattern comes from one craft.</p>
     <div class="chain">
-      <div class="chain-row chain-head"><span>Community</span><span>Maker</span><span>Craft</span><span>Motif</span><span>Pattern</span><span>Pack</span></div>
+      <div class="chain-row chain-head"><span></span><span>Maker</span><span>Craft</span><span>Motif</span><span>Pattern</span><span>Pack</span></div>
       <div class="chain-row"><div class="who"><b>Tea tribe pluckers</b><span class="label muted">Tea gardens, Sonitpur</span></div><img src="assets/editions/scenes/p1-tea.jpg" alt="Tea tribe pluckers" loading="lazy"><img src="assets/editions/closeups/ed-tea-closeup.jpg" alt="Tea tribe pluckers: the craft up close" loading="lazy"><div class="motif"><img src="assets/editions/motifs/ed-tea-motif-1.png" alt="Tea tribe pluckers motif" loading="lazy"></div><img src="assets/editions/patterns/ed-tea-pattern.jpg" alt="Tea tribe pluckers pattern" loading="lazy"><img src="assets/editions/packs/front-tea.jpg" alt="Tea tribe pluckers pack" loading="lazy"></div>
       <div class="chain-row"><div class="who"><b>Mising weavers</b><span class="label muted">Riverbank villages, Majuli</span></div><img src="assets/editions/portraits/ed-mising-portrait.jpg" alt="Mising weavers" loading="lazy"><img src="assets/editions/closeups/ed-mising-closeup.jpg" alt="Mising weavers: the craft up close" loading="lazy"><div class="motif"><img src="assets/editions/motifs/ed-mising-motif-1.png" alt="Mising weavers motif" loading="lazy"></div><img src="assets/editions/patterns/ed-mising-pattern.jpg" alt="Mising weavers pattern" loading="lazy"><img src="assets/editions/packs/front-mising.jpg" alt="Mising weavers pack" loading="lazy"></div>
       <div class="chain-row"><div class="who"><b>Bodo eri silk</b><span class="label muted">Kokrajhar</span></div><img src="assets/editions/portraits/ed-bodo-portrait.jpg" alt="Bodo eri silk" loading="lazy"><img src="assets/editions/closeups/ed-bodo-closeup.jpg" alt="Bodo eri silk: the craft up close" loading="lazy"><div class="motif"><img src="assets/editions/motifs/ed-bodo-motif-1.png" alt="Bodo eri silk motif" loading="lazy"></div><img src="assets/editions/patterns/ed-bodo-pattern.jpg" alt="Bodo eri silk pattern" loading="lazy"><img src="assets/editions/packs/front-bodo.jpg" alt="Bodo eri silk pack" loading="lazy"></div>
@@ -345,21 +287,10 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
     </div>
   </section>
 
-  <section class="wrap gap-xl rv" aria-labelledby="ed-h">
-    <p class="chapter label"><b>05</b><span class="muted">Six editions</span></p>
-    <div class="brief">
-      <p class="label muted">The packs</p>
-      <div>
-        <h2 id="ed-h">Six patterns, one label.</h2>
-        <p class="lede">The Tata Tea Premium label stays the same on every pack. The pattern around it changes, and the front names the community it comes from.</p>
-      </div>
-    </div>
-  </section>
-
-  <figure class="gap-lg bleed rv">
-    <img src="assets/editions/mockups/m4-family.jpg" alt="All six Choose Assam edition packs in a row against matching colour blocks" loading="lazy">
-    <figcaption class="wrap label muted">The six editions</figcaption>
+  <figure class="gap-xl bleed rv">
+    <img src="assets/editions/mockups/m4-family.jpg" alt="All six Choose Assam edition packs in a row" loading="lazy">
   </figure>
+  <p class="wrap gap-md line rv">Six editions. One label. Every front names its makers.</p>
 
   <section class="wrap gap-lg rv" aria-label="Edition pack fronts">
     <ol class="row-6">
@@ -372,19 +303,12 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
     </ol>
   </section>
 
-  <section class="wrap gap-lg pair rv" aria-label="Packs in their setting">
-    <figure><img src="assets/editions/mockups/m2-world-majuli.jpg" alt="The Majuli mask makers pack in a mask workshop" loading="lazy"><figcaption class="label muted">Majuli mask makers, in the workshop</figcaption></figure>
-    <div class="drop">
-      <p class="note">Each pack is shown where its craft is made.</p>
-      <figure class="gap-lg"><img src="assets/editions/mockups/m1-hero-jaapi.jpg" alt="The Jaapi makers pack on a red plinth" loading="lazy"><figcaption class="label muted">Jaapi makers</figcaption></figure>
-    </div>
+  <section class="wrap gap-xl pair rv" aria-label="Packs in their setting">
+    <figure><img src="assets/editions/mockups/m2-world-majuli.jpg" alt="The Majuli mask makers pack in a mask workshop" loading="lazy"><figcaption class="label muted">In the mask workshop, Majuli</figcaption></figure>
+    <figure class="drop"><img src="assets/editions/mockups/m1-hero-jaapi.jpg" alt="The Jaapi makers pack on a red plinth" loading="lazy"><figcaption class="label muted">Jaapi makers</figcaption></figure>
   </section>
 
-  <section class="wrap gap-xl rv" aria-labelledby="lib-h">
-    <div class="brief" style="margin-bottom:clamp(32px,4vw,56px)">
-      <p class="label muted">Pattern library</p>
-      <h2 id="lib-h">Patterns and motifs, each a separate file.</h2>
-    </div>
+  <section class="wrap gap-xl rv" aria-label="Pattern library">
     <ol class="row-6">
       <li><img src="assets/editions/patterns/ed-tea-pattern.jpg" alt="Tea tribe pluckers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Tea tribe pluckers</span><span class="muted">Jhumur, the song and dance tea-tribe communities brought from Chotanagpur</span></div></li>
       <li><img src="assets/editions/patterns/ed-mising-pattern.jpg" alt="Mising weavers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Mising weavers</span><span class="muted">Mising handloom · GI, 2024</span></div></li>
@@ -394,89 +318,58 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
       <li><img src="assets/editions/patterns/ed-jaapi-pattern.jpg" alt="Jaapi makers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Jaapi makers</span><span class="muted">Jaapi · GI, 2024</span></div></li>
     </ol>
     <div class="motif-strip gap-lg" aria-hidden="true"><img src="assets/editions/motifs/ed-tea-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-tea-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-mising-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-mising-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bodo-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bodo-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-majuli-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-majuli-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bellmetal-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bellmetal-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-jaapi-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-jaapi-motif-2.png" alt="" loading="lazy"></div>
-    <p class="label muted" style="margin-top:12px">Used on the pack, the website and social</p>
   </section>
 
-  <section class="wrap gap-xl rv" aria-labelledby="back-h">
-    <p class="chapter label"><b>06</b><span class="muted">Turn it over</span></p>
-    <div class="brief">
-      <p class="label muted">The back of the pack</p>
-      <div>
-        <h2 id="back-h">The back tells the community’s story and says where it comes from.</h2>
-        <p class="lede">A short story, a source for the craft, and a QR code that opens the makers who are open this week.</p>
-      </div>
-    </div>
-  </section>
-
-  <figure class="gap-lg bleed rv">
+  <figure class="gap-xl bleed rv">
     <img src="assets/editions/packs/backs-lineup.jpg" alt="The backs of all six packs, each with a story, a QR code and a source line" loading="lazy">
-    <figcaption class="wrap label muted">Pack backs</figcaption>
   </figure>
+  <p class="wrap gap-md line rv">The back tells their story, says where the craft is recorded, and links to makers open this week.</p>
 
-  <section class="wrap gap-lg pair rv" aria-label="Scanning the pack">
-    <figure><img src="assets/editions/mockups/m8-scan.jpg" alt="Scanning the QR code on the back of the tea tribe pack" loading="lazy"><figcaption class="label muted">One scan</figcaption></figure>
-    <div class="drop">
-      <div class="spec" role="table" aria-label="Where each craft is recorded" style="--cols: minmax(0,1fr) minmax(0,1.4fr)">
-        <div role="row"><span role="columnheader">Edition</span><span role="columnheader">Recorded as</span></div>
-      <div role="row"><span role="cell">Tea tribe pluckers</span><span role="cell" data-h="Recorded as">Jhumur, the song and dance tea-tribe communities brought from Chotanagpur</span></div>
-      <div role="row"><span role="cell">Mising weavers</span><span role="cell" data-h="Recorded as">Mising handloom · GI, 2024</span></div>
-      <div role="row"><span role="cell">Bodo eri silk</span><span role="cell" data-h="Recorded as">Bodo eri silk · GI, 2024</span></div>
-      <div role="row"><span role="cell">Majuli mask makers</span><span role="cell" data-h="Recorded as">Majuli masks · GI, 2024</span></div>
-      <div role="row"><span role="cell">Sarthebari bell metal</span><span role="cell" data-h="Recorded as">Sarthebari metal craft · GI, 2024</span></div>
-      <div role="row"><span role="cell">Jaapi makers</span><span role="cell" data-h="Recorded as">Jaapi · GI, 2024</span></div>
-      </div>
-    </div>
+  <section class="wrap gap-xl pair rev rv" aria-label="Scan">
+    <p class="line drop">One scan.</p>
+    <figure><img src="assets/editions/mockups/m8-scan.jpg" alt="Scanning the QR code on the back of a pack" loading="lazy"></figure>
   </section>
 
-  <section class="wrap gap-xl rv" aria-labelledby="tp-h">
-    <p class="chapter label"><b>07</b><span class="muted">Out in the world</span></p>
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">Touchpoints</p>
-      <h2 id="tp-h">Each touchpoint has one job.</h2>
-    </div>
-    <ol class="row-6">
-      <li><a href="#top" aria-label="Play the film at the top of the page"><img src="assets/tp-film.jpg" alt="A family watches the film on TV at home" loading="lazy"></a><div class="n label"><span>Film</span><span class="muted">Tells the story once, widely</span></div></li>
-      <li><img src="assets/tp-social.jpg" alt="A commuter watches a reel on her phone" loading="lazy"><div class="n label"><span>Social</span><span class="muted">Maker updates bring people back</span></div></li>
-      <li><img src="assets/editions/packs/front-mising.jpg" alt="The Mising weavers pack" loading="lazy"><div class="n label"><span>Pack</span><span class="muted">In the kitchen every morning</span></div></li>
-      <li><img src="assets/editions/mockups/m8-scan.jpg" alt="Scanning the pack's QR code" loading="lazy" style="object-position:70% 50%"><div class="n label"><span>QR code</span><span class="muted">One scan from any surface</span></div></li>
-      <li><a href="site/" aria-label="Open the Choose Assam microsite"><img src="assets/site-shot.jpg" alt="The Choose Assam microsite on a phone" loading="lazy" style="object-position:50% 0"></a><div class="n label"><span>Website</span><span class="muted">Buy, pre-order or lend</span></div></li>
-      <li><img src="assets/editions/mockups/m5-giftbox.jpg" alt="A gift box of six editions with story cards" loading="lazy"><div class="n label"><span>Gift box</span><span class="muted">All six, with story cards</span></div></li>
-    </ol>
-  </section>
-
-  <figure class="gap-lg bleed rv">
-    <img src="assets/editions/mockups/m7-billboard.jpg" alt="A billboard over city traffic with the Bodo eri silk pack and a QR code" loading="lazy">
-    <figcaption class="wrap label muted">Outdoor</figcaption>
-  </figure>
-
-  <section class="wrap gap-xl rv" aria-label="Campaign site">
-    <p class="chapter label"><b>08</b><span class="muted">One scan</span></p>
-    <p class="note" style="margin-bottom:clamp(28px,4vw,56px)">The QR opens the maker platform: 24 makers across seven crafts and 16 districts. Each shows its status and what you can do right now.</p>
-  </section>
-  <figure class="web-frame rv">
+  <figure class="gap-lg web-frame rv">
     <div class="view"><iframe src="site/" title="Choose Assam microsite, live" loading="lazy"></iframe></div>
   </figure>
-  <p class="wrap label muted" style="margin-top:12px;display:flex;justify-content:space-between;gap:16px"><span>Microsite · live, scroll inside</span><a href="site/">Open full screen ↗</a></p>
+  <p class="wrap label muted" style="margin-top:12px;display:flex;justify-content:space-between;gap:16px"><span>The maker platform · live, scroll inside</span><a href="site/">Open full screen ↗</a></p>
+
+  <figure class="gap-xl bleed rv">
+    <img src="assets/editions/mockups/m7-billboard.jpg" alt="A billboard over city traffic with the Bodo eri silk pack and a QR code" loading="lazy">
+  </figure>
+
+  <figure class="gap-lg bleed rv">
+    <img src="assets/editions/mockups/m5-giftbox.jpg" alt="A gift box of all six editions with story cards" loading="lazy">
+  </figure>
 
   <figure class="gap-xl bleed rv">
     <img src="assets/bleed-delivery.jpg" alt="A delivery rider carries a parcel across a bridge over the Brahmaputra" loading="lazy">
-    <figcaption class="wrap label muted">The order goes out</figcaption>
   </figure>
-
   <figure class="gap-lg bleed rv">
-    <img src="assets/bleed-home.jpg" alt="Hands unwrap a handwoven cloth from kraft paper beside a cup of tea" loading="lazy">
-    <figcaption class="wrap label muted">And arrives</figcaption>
+    <img src="assets/bleed-home.jpg" alt="Hands unwrap a handwoven cloth beside a cup of tea" loading="lazy">
   </figure>
+  <p class="wrap gap-md line rv">The order reaches the maker. The buyer may come back.</p>
 
-  <section class="wrap gap-xl rv" aria-labelledby="sys-h">
-    <p class="chapter label"><b>09</b><span class="muted">How it works</span></p>
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">The system</p>
-      <div>
-        <h2 id="sys-h">The media brings people in. The platform decides where the money goes.</h2>
-        <p class="lede">Every pack and ad carries the same QR. It opens the maker platform, where each maker’s status decides what you can do. A maker collective checks every maker and posts their updates.</p>
-      </div>
-    </div>
+  <section class="wrap gap-xl rv" aria-labelledby="engine-h">
+    <p class="line" id="engine-h" style="margin-bottom:clamp(32px,4vw,56px)">What you can do depends on where the maker is.</p>
+    <ol class="row-4">
+      <li><img src="assets/state-closed.jpg" alt="Jonali at her shutter as floodwater fills the workshop" loading="lazy"><div class="n label"><span>Closed</span><span class="muted">Day 1</span></div>
+        <dl><div><dt>Released</dt><dd>Nothing yet. The collective verifies the maker and lists them.</dd></div><div><dt>You can</dt><dd>Lend</dd></div></dl></li>
+      <li><img src="assets/state-rebuilding.jpg" alt="Jonali hangs washed yarn to dry on a mud-cracked floor" loading="lazy"><div class="n label"><span>Rebuilding</span><span class="muted">Day 14</span></div>
+        <dl><div><dt>Released</dt><dd>Repair funds, for silt, looms and stock</dd></div><div><dt>You can</dt><dd>Lend</dd></div></dl></li>
+      <li><img src="assets/state-producing.jpg" alt="Jonali and another weaver at work, finished cloths stacked on shelves" loading="lazy"><div class="n label"><span>Producing</span><span class="muted">Day 40</span></div>
+        <dl><div><dt>Released</dt><dd>Working capital, from pre-orders</dd></div><div><dt>You can</dt><dd>Pre-order, lend</dd></div></dl></li>
+      <li><img src="assets/film-handoff.jpg" alt="A parcel handed to a delivery rider outside the workshop" loading="lazy"><div class="n label"><span>Open</span><span class="muted">Day 90</span></div>
+        <dl><div><dt>Released</dt><dd>Sales go straight to the maker. Loan repayments begin.</dd></div><div><dt>You can</dt><dd>Buy, pre-order</dd></div></dl></li>
+    </ol>
+  </section>
+
+  <section class="wrap gap-xl rv" aria-label="Project notes">
+    <p class="label muted" style="margin-bottom:16px">Project notes</p>
+    <div class="notes">
+      <details><summary>How the system works</summary><div class="body">
+        <p class="lede" style="margin:0 0 32px">Every pack and ad carries the same QR. It opens the maker platform, where each maker’s status decides what you can do. A maker collective checks every maker and posts their updates.</p>
     <div class="sys" id="sys">
       <div class="sys-layer">
         <p class="label muted">Reach · Tata Tea’s media</p>
@@ -520,36 +413,9 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
       <p class="sys-loop label" aria-label="Feedback loop"><span>Maker updates feed the ledger, the pack and social</span></p>
     </div>
     <p class="sys-hint label muted" id="sys-hint" aria-live="polite">Hover or tab to a part to see what it connects to</p>
-  </section>
-
-  <section class="wrap gap-xl rv" aria-labelledby="engine-h">
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">Maker status</p>
-      <div>
-        <h2 id="engine-h">What you can do depends on where the maker is.</h2>
-        <p class="lede">You can’t buy from a maker who can’t ship yet. Loan repayments only start once they are selling again.</p>
-      </div>
-    </div>
-    <ol class="row-4">
-      <li><img src="assets/state-closed.jpg" alt="Jonali at her shutter as floodwater fills the workshop" loading="lazy"><div class="n label"><span>Closed</span><span class="muted">Day 1</span></div>
-        <dl><div><dt>Released</dt><dd>Nothing yet. The collective verifies the maker and lists them.</dd></div><div><dt>You can</dt><dd>Lend</dd></div></dl></li>
-      <li><img src="assets/state-rebuilding.jpg" alt="Jonali hangs washed yarn to dry on a mud-cracked floor" loading="lazy"><div class="n label"><span>Rebuilding</span><span class="muted">Day 14</span></div>
-        <dl><div><dt>Released</dt><dd>Repair funds, for silt, looms and stock</dd></div><div><dt>You can</dt><dd>Lend</dd></div></dl></li>
-      <li><img src="assets/state-producing.jpg" alt="Jonali and another weaver at work, finished cloths stacked on shelves" loading="lazy"><div class="n label"><span>Producing</span><span class="muted">Day 40</span></div>
-        <dl><div><dt>Released</dt><dd>Working capital, from pre-orders</dd></div><div><dt>You can</dt><dd>Pre-order, lend</dd></div></dl></li>
-      <li><img src="assets/film-handoff.jpg" alt="A parcel handed to a delivery rider outside the workshop" loading="lazy"><div class="n label"><span>Open</span><span class="muted">Day 90</span></div>
-        <dl><div><dt>Released</dt><dd>Sales go straight to the maker. Loan repayments begin.</dd></div><div><dt>You can</dt><dd>Buy, pre-order</dd></div></dl></li>
-    </ol>
-  </section>
-
-  <section class="wrap gap-xl rv" aria-labelledby="backing-h">
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">Backing makers</p>
-      <div>
-        <h2 id="backing-h">Three legal ways to back a maker.</h2>
-        <p class="lede">Equity crowdfunding isn’t legal in India, so the platform uses pre-orders, a licensed lending partner, and the Social Stock Exchange.</p>
-      </div>
-    </div>
+      </div></details>
+      <details><summary>Backing makers, legally</summary><div class="body">
+        <p class="lede" style="margin:0 0 32px">Equity crowdfunding isn’t legal in India, so the platform uses pre-orders, a licensed lending partner and the Social Stock Exchange.</p>
     <div class="spec" role="table" aria-label="Three legal ways to back a maker" style="--cols: minmax(0,1fr) minmax(0,1fr) minmax(0,2fr) minmax(0,2fr)">
       <div role="row"><span role="columnheader">Route</span><span role="columnheader">Who</span><span role="columnheader">How it works</span><span role="columnheader">Legal basis</span></div>
       <div role="row"><span role="cell">Pre-order</span><span role="cell" data-h="Who">Anyone</span><span role="cell" data-h="How it works">Pay now, receive the goods later. It funds the maker’s working capital.</span><span role="cell" class="muted" data-h="Legal basis">Reward crowdfunding, legal without sector-specific rules (<a href="https://www.incorpx.io/blog/crowdfunding-india-sebi-legal-framework-2026" target="_blank" rel="noopener">InCorpX</a>)</span></div>
@@ -559,31 +425,36 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
     <p class="label muted">Backing the collective gives Tata a regulated, auditable way to anchor the fund, a stronger story than “we donated”.</p>
 
 
-    <div class="brief gap-lg">
-      <p class="label muted">Trust</p>
+
+        <p class="label muted" style="margin:32px 0 0">Trust</p>
       <ol class="index" style="margin-top:0">
         <li><span class="label muted">01</span><span><b>Verification.</b> The collective checks every maker in person before listing. Each listing shows their Udyam registration and any GI tags.</span></li>
         <li><span class="label muted">02</span><span><b>Milestone release.</b> Money unlocks by status, as above. Nothing reaches a stage the maker hasn’t reached.</span></li>
         <li><span class="label muted">03</span><span><b>A public ledger per maker.</b> Orders fulfilled, money received and used, repayments made, and photo updates at 30, 60 and 90 days.</span></li>
         <li><span class="label muted">04</span><span><b>Risk labels and a grievance path</b> on every loan, because the platform can’t guarantee repayment.</span></li>
       </ol>
-    </div>
-  </section>
-
-  <section class="wrap gap-xl rv" aria-labelledby="trade-h">
-    <p class="chapter label"><b>10</b><span class="muted">Reflection</span></p>
-    <div class="brief" style="margin-bottom:clamp(40px,5vw,72px)">
-      <p class="label muted">Tradeoffs</p>
-      <h2 id="trade-h">What I chose, and what it cost.</h2>
-    </div>
+      </div></details>
+      <details><summary>Where each craft is recorded</summary><div class="body">
+      <div class="spec" role="table" aria-label="Where each craft is recorded" style="--cols: minmax(0,1fr) minmax(0,1.4fr)">
+        <div role="row"><span role="columnheader">Edition</span><span role="columnheader">Recorded as</span></div>
+      <div role="row"><span role="cell">Tea tribe pluckers</span><span role="cell" data-h="Recorded as">Jhumur, the song and dance tea-tribe communities brought from Chotanagpur</span></div>
+      <div role="row"><span role="cell">Mising weavers</span><span role="cell" data-h="Recorded as">Mising handloom · GI, 2024</span></div>
+      <div role="row"><span role="cell">Bodo eri silk</span><span role="cell" data-h="Recorded as">Bodo eri silk · GI, 2024</span></div>
+      <div role="row"><span role="cell">Majuli mask makers</span><span role="cell" data-h="Recorded as">Majuli masks · GI, 2024</span></div>
+      <div role="row"><span role="cell">Sarthebari bell metal</span><span role="cell" data-h="Recorded as">Sarthebari metal craft · GI, 2024</span></div>
+      <div role="row"><span role="cell">Jaapi makers</span><span role="cell" data-h="Recorded as">Jaapi · GI, 2024</span></div>
+      </div>
+      </div></details>
+      <details><summary>Tradeoffs and what’s still open</summary><div class="body">
     <div class="spec" role="table" aria-label="Constraints and tradeoffs" style="--cols: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)">
       <div role="row"><span role="columnheader">Constraint</span><span role="columnheader">What I chose</span><span role="columnheader">What it cost</span></div>
       <div role="row"><span role="cell">A brand shouldn’t look like it profits from a flood.</span><span role="cell" data-h="What I chose">Buying, pre-ordering and lending. No donate button.</span><span role="cell" data-h="What it cost">Harder to explain than “donate”, and it only helps makers who can sell again.</span></div>
       <div role="row"><span role="cell">Makers recover at different speeds.</span><span role="cell" data-h="What I chose">A status for every maker that decides what you can do.</span><span role="cell" data-h="What it cost">In the first weeks most makers aren’t open, so lending and pre-orders carry the load.</span></div>
       <div role="row"><span role="cell">Packs can’t be reprinted every week.</span><span role="cell" data-h="What I chose">One QR on every pack. What changes lives on the platform.</span><span role="cell" data-h="What it cost">It depends on the collective keeping statuses up to date.</span></div>
       <div role="row"><span role="cell">Using community crafts on a commercial pack.</span><span role="cell" data-h="What I chose">Name each community on the front, cite the craft on the back, link to its makers.</span><span role="cell" data-h="What it cost">The patterns would need to be made with the communities and paid for before print.</span></div>
+
     </div>
-    <div class="brief gap-lg">
+        <div style="margin-top:40px">
       <p class="label muted">Still open</p>
       <ol class="index" style="margin-top:0">
         <li><span class="label muted">01</span><span>The patterns and portraits are generated. A real edition would be drawn with each community and checked by them.</span></li>
@@ -591,14 +462,9 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
         <li><span class="label muted">03</span><span>Real makers on the platform, in place of the illustrative ones.</span></li>
         <li><span class="label muted">04</span><span>Earlier campaigns did parts of this. Tata Tea’s own Desh Ke Dhaage packs featured handloom weavers, and #KeralaIsOpen brought visitors back after Kerala’s 2018 floods. Choose Assam joins the pack to a live list of makers.</span></li>
       </ol>
-    </div>
-  </section>
-
-  <section class="wrap gap-xl rv" aria-labelledby="src-h">
-    <div class="brief" style="margin-bottom:clamp(32px,4vw,56px)">
-      <p class="label muted" id="src-h">Sources</p>
-      <p class="muted" style="max-width:52ch">Where the research, crafts, references and backing routes come from. The campaign, its figures and its makers are speculative.</p>
-    </div>
+        </div>
+      </div></details>
+      <details><summary>Sources</summary><div class="body">
     <div class="sources">
       <ol aria-label="Research and crafts">
         <li>Assam State Disaster Management Authority<span>Flood Reporting and Information Management System (FRIMS)</span></li>
@@ -623,6 +489,8 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
         <li><a href="https://indiacorplaw.in/2017/10/10/rbi-directions-peer-peer-lending/" target="_blank" rel="noopener">IndiaCorpLaw</a><span>RBI Directions on P2P lending</span></li>
         <li><a href="https://ssrana.in/articles/a-new-route-for-csr-deployment-zczp-instruments-on-the-social-stock-exchange/" target="_blank" rel="noopener">S.S. Rana</a><span>CSR through ZCZP instruments on the Social Stock Exchange</span></li>
       </ol>
+    </div>
+      </div></details>
     </div>
   </section>
 
