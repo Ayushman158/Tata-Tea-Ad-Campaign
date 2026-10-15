@@ -5,7 +5,7 @@ Generated with ChatGPT image generation (October 2026). Check motifs against rea
 
 | Folder | Contents | Notes |
 |---|---|---|
-| patterns/ | `ed-[edition]-pattern.jpg` (1254 px), `ed-[edition]-tile.png` (true repeat, for CSS `background-repeat`) | Repeat tiles exist only for Mising and Majuli. The tea and jaapi patterns don't repeat cleanly, so redraw them as vectors. Bodo and bell-metal patterns are still to generate. |
+| patterns/ | `ed-[edition]-pattern.jpg` (1254 px), `ed-[edition]-tile.png` (true repeat, for CSS `background-repeat`) | Repeat tiles exist for Mising, Majuli and bell metal. The tea, jaapi and Bodo patterns don’t repeat cleanly, so redraw them as vectors. |
 | motifs/ | `ed-[edition]-motif-1/2.png`, transparent | Cut from one sheet, about 250–350 px. Good for icons and small marks, too small for print. |
 | portraits/ | `ed-[edition]-portrait.jpg` | About 560 px, cut from a grid. Thumbnails only. |
 | closeups/ | `ed-[edition]-closeup.jpg` (wide), `-closeup-sq.jpg` | About 830 px and 310 px. Thumbnails only. |
