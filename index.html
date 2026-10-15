@@ -91,6 +91,9 @@ figcaption { margin-top: 12px; }
 .row-6 { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(8px, 1vw, 16px); }
 .row-6 img, .row-6 video { aspect-ratio: 4 / 5; object-fit: cover; }
 .row-6 .n { margin-top: 12px; border-top: 1px solid var(--ink); padding-top: 10px; display: grid; gap: 4px; }
+.motif-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: clamp(12px, 2vw, 28px); background: #F4EFE3; padding: clamp(28px, 4vw, 56px); }
+.motif-strip img { width: auto; height: clamp(44px, 5vw, 76px); }
+.gap-md { margin-top: clamp(24px, 3vw, 40px); }
 .row-6 .n span:last-child { text-transform: none; letter-spacing: 0; font-size: 14px; }
 
 /* ── sources ── */
@@ -441,29 +444,42 @@ footer { padding: 28px var(--gutter) 40px; display: flex; justify-content: space
     <p class="label muted" style="margin-top:12px">The constant · One lockup, four colours, on every touchpoint</p>
 
     <div class="brief gap-lg">
-      <p class="label muted">The editions · Planned, not yet designed</p>
+      <p class="label muted">The editions</p>
       <div>
-        <div class="spec" role="table" aria-label="Planned pack editions" style="--cols: minmax(0,1fr) minmax(0,2fr)">
-          <div role="row"><span role="columnheader">Edition</span><span role="columnheader">The band comes from</span></div>
-          <div role="row"><span role="cell">Silk</span><span role="cell" data-h="The band comes from">Muga and pat silk from Sualkuchi; Bodo Aronai weaving</span></div>
-          <div role="row"><span role="cell">Bamboo and cane</span><span role="cell" data-h="The band comes from">The japi; basketry from Barpeta and Cachar</span></div>
-          <div role="row"><span role="cell">Bell metal</span><span role="cell" data-h="The band comes from">The xorai from Sarthebari</span></div>
-          <div role="row"><span role="cell">Majuli</span><span role="cell" data-h="The band comes from">Masks and pottery</span></div>
-          <div role="row"><span role="cell">Food</span><span role="cell" data-h="The band comes from">Bhut jolokia, bamboo shoot pickle, Joha rice, Karbi Anglong ginger, Assam lemon</span></div>
-          <div role="row"><span role="cell">Tea community</span><span role="cell" data-h="The band comes from">Jhumur and Karam, made with community artists, credited and paid</span></div>
-        </div>
-        <p class="lede">The tea community edition is the centrepiece, and it has to be co-authored. A tea brand using tea-community imagery will rightly be questioned, given the history of estate labour, so the co-authorship shows on the pack and on the site.</p>
+        <h2>Six communities, six patterns, one label.</h2>
+        <p class="lede">Each pattern is drawn from one community’s own craft. The front names the makers; the back tells their story, cites where the craft is documented, and links to the makers open this week.</p>
       </div>
     </div>
+    <ol class="row-6 gap-md">
+      <li><img src="assets/editions/patterns/ed-tea-pattern.jpg" alt="Tea tribe pluckers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Tea tribe pluckers</span><span class="muted">Jhumur, the song and dance the tea tribe brought from Chotanagpur</span></div></li>
+      <li><img src="assets/editions/patterns/ed-mising-pattern.jpg" alt="Mising weavers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Mising weavers</span><span class="muted">Mising handloom · GI, 2024</span></div></li>
+      <li><img src="assets/editions/patterns/ed-bodo-pattern.jpg" alt="Bodo eri silk pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Bodo eri silk</span><span class="muted">Bodo eri silk · GI, 2024</span></div></li>
+      <li><img src="assets/editions/patterns/ed-majuli-pattern.jpg" alt="Majuli mask makers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Majuli mask makers</span><span class="muted">Majuli masks · GI, 2024</span></div></li>
+      <li><img src="assets/editions/patterns/ed-bellmetal-pattern.jpg" alt="Sarthebari bell metal pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Sarthebari bell metal</span><span class="muted">Sarthebari metal craft · GI, 2024</span></div></li>
+      <li><img src="assets/editions/patterns/ed-jaapi-pattern.jpg" alt="Jaapi makers pattern" loading="lazy" style="aspect-ratio:1"><div class="n label"><span>Jaapi makers</span><span class="muted">Jaapi · GI, 2024</span></div></li>
+    </ol>
+    <div class="motif-strip gap-lg" aria-hidden="true"><img src="assets/editions/motifs/ed-tea-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-tea-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-mising-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-mising-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bodo-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bodo-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-majuli-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-majuli-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bellmetal-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-bellmetal-motif-2.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-jaapi-motif-1.png" alt="" loading="lazy"> <img src="assets/editions/motifs/ed-jaapi-motif-2.png" alt="" loading="lazy"></div>
+    <p class="label muted" style="margin-top:12px">Pattern library and motifs · each a separate file, reused on the pack, the site and social</p>
   </section>
 
-  <figure class="gap-xl bleed rv">
-    <img src="assets/pack-front.jpg" alt="Choose Assam limited-edition Tata Tea Premium pouch: Now put Assam in your cart" loading="lazy">
-    <figcaption class="wrap label muted">Pack · Front</figcaption>
+  <section class="wrap gap-xl rv" aria-label="Edition packs">
+    <ol class="row-6">
+      <li><img src="assets/editions/packs/front-tea.jpg" alt="Tea tribe pluckers edition pack front" loading="lazy"><div class="n label"><span>Tea tribe pluckers</span><span class="muted">Front</span></div></li>
+      <li><img src="assets/editions/packs/front-mising.jpg" alt="Mising weavers edition pack front" loading="lazy"><div class="n label"><span>Mising weavers</span><span class="muted">Front</span></div></li>
+      <li><img src="assets/editions/packs/front-bodo.jpg" alt="Bodo eri silk edition pack front" loading="lazy"><div class="n label"><span>Bodo eri silk</span><span class="muted">Front</span></div></li>
+      <li><img src="assets/editions/packs/front-majuli.jpg" alt="Majuli mask makers edition pack front" loading="lazy"><div class="n label"><span>Majuli mask makers</span><span class="muted">Front</span></div></li>
+      <li><img src="assets/editions/patterns/ed-bellmetal-pattern.jpg" alt="Sarthebari bell metal pattern; pack front in progress" loading="lazy" style="opacity:.55"><div class="n label"><span>Sarthebari bell metal</span><span class="muted">Front in progress</span></div></li>
+      <li><img src="assets/editions/packs/front-jaapi.jpg" alt="Jaapi makers edition pack front" loading="lazy"><div class="n label"><span>Jaapi makers</span><span class="muted">Front</span></div></li>
+    </ol>
+  </section>
+
+  <figure class="gap-lg bleed rv">
+    <img src="assets/editions/packs/backs-lineup.jpg" alt="The backs of all six edition packs, each with the community's story, a QR code and a source line" loading="lazy">
+    <figcaption class="wrap label muted">Pack · Backs · the story, the QR and the source</figcaption>
   </figure>
 
-  <section class="wrap gap-lg pair rv" aria-label="Pack and retail">
-    <figure><img src="assets/pack-back.jpg" alt="Back of the pouch: This pack doesn't donate. It points. Scan the tag to meet the makers open this week." loading="lazy"><figcaption class="label muted">Pack · Back</figcaption></figure>
+  <section class="wrap gap-lg pair rv" aria-label="Pack back">
+    <figure><img src="assets/pack-back.jpg" alt="The launch pack back: This pack doesn't donate. It points." loading="lazy"><figcaption class="label muted">Launch pack · Back</figcaption></figure>
     <div class="drop">
       <p class="note">This pack doesn't donate. It points to the makers who are open this week.</p>
     </div>
