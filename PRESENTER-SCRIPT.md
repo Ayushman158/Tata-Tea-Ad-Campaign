@@ -22,23 +22,27 @@ A lot of people still want to help. But with online donation drives, you don't k
 
 > Don't credit #KeralaIsOpen to Tata Tea. It was Samsonite India's campaign after the 2018 Kerala floods. Use it as a precedent: "#KeralaIsOpen brought tourists back after Kerala's floods. This does the same for Assam's makers."
 
-**02 The makers**
+**01 The communication ecology**
+
+"Here is the system. People see the campaign on film, social media, the pack, billboards and the gift box. Every one of them carries the same QR code, which opens the platform. There they can buy, pre-order or lend, depending on where the maker is: Closed, Rebuilding, Producing or Open. Makers post updates, which go back on social media and the platform and bring people back."
+
+**03 The makers**
 
 "I chose six communities from Assam, each with its own craft: the tea-tribe pluckers, the Majuli mask makers, the Sarthebari bell-metal makers, who make utensils out of bell metal, the Mising weavers, the Bodo eri silk weavers and the jaapi makers. I generated each pattern with AI to represent one of these communities, and each one is based on that community's craft."
 
-**03 What changed**
+**04 What changed**
 
 "This was the earlier packaging. It used the gamosa, which says Assam but doesn't credit anyone. This is the new packaging."
 
-**04 Six editions**
+**05 Six editions**
 
 "These are the six limited-edition packs for the campaign. The back of each pack has the community's story, where the craft is recorded, and a QR code."
 
-**05 Out in the world**
+**06 Out in the world**
 
 "This is the billboard, and the gift box with all six packs and story cards."
 
-**06 The platform**
+**07 The platform**
 
 "The QR code opens this website. People can buy from makers, pre-order, or lend money to these small businesses, so they become part of the system. Each maker has a status, Closed, Rebuilding, Producing or Open, and that decides what you can do. Each maker page also shows where the money goes, which is what donation drives don't do."
 
