@@ -26,6 +26,10 @@ A lot of people still want to help. But with online donation drives, you don't k
 
 "Here is the system. People see the campaign on film, social media, the pack, billboards and the gift box. Every one of them carries the same QR code, which opens the platform. There they can buy, pre-order or lend, depending on where the maker is: Closed, Rebuilding, Producing or Open. Makers post updates, which go back on social media and the platform and bring people back."
 
+**02 After the water**
+
+"These are the floods, and the shops starting to reopen. The idea is to buy from makers instead of donating. Similar campaigns exist, like Desh Ke Dhaage, #KeralaIsOpen and Chekutty, but none of them links you to a specific maker you can pay directly."
+
 **03 The makers**
 
 "I chose six communities from Assam, each with its own craft: the tea-tribe pluckers, the Majuli mask makers, the Sarthebari bell-metal makers, who make utensils out of bell metal, the Mising weavers, the Bodo eri silk weavers and the jaapi makers. I generated each pattern with AI to represent one of these communities, and each one is based on that community's craft."
