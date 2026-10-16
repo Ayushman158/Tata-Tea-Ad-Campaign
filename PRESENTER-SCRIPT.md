@@ -20,7 +20,7 @@ I wrote the brief and the system, designed the pack system, and built the maker 
 
 ## 0:50 · 01 After the water, and what already exists
 
-"The idea in one line: not a donation, an order.
+"The idea: buy from makers instead of donating.
 
 Parts of this already exist. Tata Tea's own Desh Ke Dhaage packs featured handloom weavers. #KeralaIsOpen brought visitors back after Kerala's 2018 floods. Chekutty dolls were made from flood-ruined saris. None of them connects a pack to a specific maker. That's the gap I designed for."
 
